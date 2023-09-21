@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produtos</title>
+</head>
+<body>
+  <a href="adicionar">Adicionar produto</a>
+  <hr>
+  {{#if produtos.length }}
+    <table>
+      <tr>
+        <th>nome</th>
+        <th>destinacao</th>
+        <th>status</th>
+        <th>Taxa de rentabilidade ao ano</th>
+        <th>Taxa de administração</th>
+        <th>Liquidez diária</th>
+        <th>Prazo</th>
+        <th>Data de vencimento</th>
+      </tr>
+    {{#each produtos}}
+      <tr>
+        <td>{{nome}}</td>
+        <td>{{destinacao}}</td>
+        <td>{{status}}</td>
+        <td>{{TaxaRentabilidadeAA}}</td>
+        <td>{{TaxaAdministracao}}</td>
+        <td>{{liquidezDiaria}}</td>
+        <td>{{prazo}}</td>
+        <td>{{datavencimento}}</td>
+        <td>
+          <a href="alternar-status?id={{id}}">Alterar status</a>
+          <a href="remover?id={{id}}">Remover</a>
+        </td>
+      </tr>
+    {{/each}}
+    </table>
+    {{else}}
+    <p>Nenhum produto para ser listado</p>
+  {{/if}}
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Adicionar Produto</title>
+</head>
+<body>
+    <h1>Adicionar produto</h1>
+  <form action="form-produto" method="POST">
+    <input type="text" name="nome" placeholder="Nome...">
+    <input type="text" name="destinacao" placeholder="Destinacao...">
+    <input type="number" name="TaxaRentabilidadeAA" step="1"
+      placeholder="Taxa de rentabilidade a.a...">
+    <input type="number" name="TaxaAdministracao" step="1" 
+      placeholder="Taxa de administração...">
+    <select name="liquidezDiaria" id="liquidezDiaria" required>
+      <option value="" disabled selected hidden>Liquidez diária</option>
+      <option value="sim">sim</option>
+      <option value="nao">nao</option>
+    </select>
+    <input type="number" name="prazo" placeholder="Prazo...">
+    <input type="date" name="datavencimento" placeholder="Data de vencimento...">
+    <input type="submit" value="Adicionar produto">
+  </form>
+  <hr>
+</body>
+</html>
